@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC >
+<html>
+  <meta charset="UTF-8">
+	<head>
+  
+	</head>
+		<body style="background-image: url(Tobish_logo_white.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+<style>
+
+@keyframes anim{
+	0%{filter: contrast(0%);}
+  35%{filter: contrast(40%);}
+  40%{filter: contrast(75%);}
+	50%{filter: contrast(100%);}
+  70%{filter: contrast(75%);}
+  85%{filter: contrast(40%);}
+	100%{filter: contrast(0%);}
+}
+@keyframes anim3{
+	0%{filter: contrast(75%);}
+  35%{filter: contrast(80%);}
+  40%{filter: contrast(85%);}
+	50%{filter: contrast(90%);}
+  70%{filter: contrast(85%);}
+  85%{filter: contrast(80%);}
+	100%{filter: contrast(75%);}
+}
+
+@keyframes anim1{
+	0%{margin-left: 0%; margin-top: 0%;}
+	20%{margin-left: 2%; margin-top: 0%; background-color: white; tab-size: 120%;}
+  90%{margin-left: 2%; margin-top: 0%; background-color: white; tab-size: 120%;}
+  100%{margin-left: 0%; margin-top: 0%;}
+}
+@keyframes anim2{
+	0%{margin-left: 2%; margin-top: 0%; background-color: white; tab-size: 120%;}
+  100%{margin-left: 0%; margin-top: 0%;}
+}
+html, body {
+  height: 100%;
+}
+ 
+.wrap {
+  height: 90%;
+  display: flex;
+}
+main {
+  flex: 1;
+  display: flex;
+  height: 100%;
+}
+ 
+aside, article {
+  overflow-y: scroll;
+  padding: 2em;
+}
+ 
+aside {
+  flex: 1;
+}
+ 
+article {
+  flex: 2;
+}
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+#Logotipe{
+	-webkit-animation: anim 8s infinite;
+	animation: anim 8s infinite;
+	animation-play-state: running;
+}
+
+#Logotipe1:hover{
+	-webkit-animation: anim1 1s infinite;
+	animation: anim1 1s infinite;
+	animation-play-state: running;
+}
+#Logotipe1{
+  -webkit-animation: anim2 1s;
+	animation: anim2 1s;
+	animation-play-state: running;
+}
+#searcherPanel:focus{
+  -webkit-animation: anim3 1s infinite;
+	animation: anim3 1s infinite;
+	animation-play-state: running;
+}
+
+</style>
+		</div>
+<div style="background-color: silver ; padding: 0px; border: 1px solid gray; margin-top: -10px;">
+  <a id="Logotipe" href="index.html"><img style="margin-right: 50px; filter: invert(100%);" src="Logo.png" width=192 height=48 /></a>
+<input id="searcherPanel" style="border-radius: 10px; vertical-align: 15px; font-size: 16px;" type="search" onchange="veyt()"/>
+<button style="border-radius: 10px; vertical-align: 15px;" type="button" onclick="veyt()">найти</button>
+</div>
+<div class="wrap">
+ 
+ <main>
+ 
+    <aside>
+      <h1 style="background-color: whitesmoke; border-radius: 10px; border-style: outset; margin-top: -10px;">Поисковик Google используется по умолчанию. В настройках можно изменить!<h1></h1>
+    </aside>
+ 
+  </main>
+</div>
+Search helper created by Tobish. 2021 
+
+<script>
+ 
+    function veyt(){
+      let value_;
+      value_ = document.getElementById("searcherPanel").value.toString();
+      open("https://searcherVEBABR.com" + value_, "", "", "");
+    }
+</script>
+    </body>
+</html>
