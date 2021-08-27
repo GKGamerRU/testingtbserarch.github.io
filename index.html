@@ -2,7 +2,7 @@
 <html>
   <meta charset="windows-1251">
 	<head>
-  
+ 	 <lls id="ONLYVEBABR" style="object-position: -100px, 0px; font-size: 0px;">https://google.com/search?q=</lls>
 	</head>
 		<body style="background-image: url(Tobish_logo_white.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
 
@@ -95,7 +95,7 @@ article {
 		</div>
 <div style="background-color: silver ; padding: 0px; border: 1px solid gray; margin-top: -10px;">
   <a id="Logotipe" href="index.html"><img style="margin-right: 50px; filter: invert(100%);" src="Logo.png" width=192 height=48 /></a>
-<input id="searcherPanel" style="border-radius: 10px; vertical-align: 15px; font-size: 16px;" type="search" onchange="veyt()"/>
+<input id="searcherPanel" style="border-radius: 10px; vertical-align: 15px; font-size: 16px;" type="search" onsubmit="veyt()"/>
 <button style="border-radius: 10px; vertical-align: 15px;" type="button" onclick="veyt()">найти</button>
 </div>
 <div class="wrap">
@@ -114,8 +114,10 @@ Search helper created by Tobish. 2021
  
     function veyt(){
       let value_;
+      let value2
       value_ = document.getElementById("searcherPanel").value.toString();
-      open("https://google.com/search?q=" + value_, "", "", "");
+      value2 = document.getElementById('ONLYVEBABR').innerHTML;
+      open(value2 + value_);
     }
 </script>
     </body>
