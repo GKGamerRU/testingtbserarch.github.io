@@ -1,21 +1,21 @@
 <!DOCTYPE html PUBLIC >
 <html>
-  <meta charset="windows-1251">
+  <meta charset="UTF-8">
 	<head>
-		<title>Tobish Search</title>
- 	 <lls id="ONLYVEBABR" style="object-position: -100px, 0px; font-size: 0px;">https://google.com/search?q=</lls>
+    <lls id="ONLYVEBABR" style="object-position: -100px, 0px; font-size: 0px;">https://google.com/search?q=</lls>
 	</head>
+  
 		<body style="background-image: url(Tobish_logo_white.png); background-repeat: no-repeat; background-position: center; background-size: 150%;">
 
 <style>
 
 @keyframes anim{
 	0%{filter: contrast(0%);}
-  35%{filter: contrast(15%);}
-  40%{filter: contrast(25%);}
-	50%{filter: contrast(40%);}
-  70%{filter: contrast(25%);}
-  85%{filter: contrast(15%);}
+  35%{filter: contrast(40%);}
+  40%{filter: contrast(75%);}
+	50%{filter: contrast(100%);}
+  70%{filter: contrast(75%);}
+  85%{filter: contrast(40%);}
 	100%{filter: contrast(0%);}
 }
 @keyframes anim3{
@@ -38,6 +38,16 @@
 	0%{margin-left: 2%; margin-top: 0%; background-color: white; tab-size: 120%;}
   100%{margin-left: 0%; margin-top: 0%;}
 }
+
+@keyframes anim4{
+	0%{background-color: whitesmoke; border-radius: 10px; border-style: outset; margin-top: -30px; box-shadow: 2px 2px 7px; font-size: 16px; opacity: 0%;}
+	100%{background-color: whitesmoke; border-radius: 10px; border-style: outset; margin-top: -10px; box-shadow: 2px 2px 7px; font-size: 32px; opacity: 100%;}
+}
+@keyframes anim5{
+	0%{background-color: whitesmoke; border-radius: 10px; border-style: outset; margin-top: -10px; box-shadow: 2px 2px 7px; font-size: 32px; opacity: 100%;}
+	100%{background-color: whitesmoke; border-radius: 10px; border-style: outset; margin-top: -30px; box-shadow: 2px 2px 7px; font-size: 32px; opacity: 0%;}
+}
+
 html, body {
   height: 100%;
 }
@@ -86,6 +96,18 @@ article {
 	animation: anim2 1s;
 	animation-play-state: running;
 }
+
+.paneli{
+  -webkit-animation: anim4 1s;
+	animation: anim4 1s;
+	animation-play-state: running;
+}
+.paneli2{
+  -webkit-animation: anim5 1s;
+	animation: anim5 1s;
+	animation-play-state: running;
+}
+
 #searcherPanel:focus{
   -webkit-animation: anim3 1s infinite;
 	animation: anim3 1s infinite;
@@ -94,17 +116,19 @@ article {
 
 </style>
 		</div>
-<div style="background-color: silver ; padding: 0px; border: 1px solid gray; margin-top: -10px; height: 7%; min-height: 50px;">
-  <a id="Logotipe" href="index.html"><label style="margin-right: 50px; filter: invert(100%); font-family: 'Arial Narrow Bold', sans-serif; font-size: 32px; vertical-align: 15px; background-position-x: center;" width=192 height=48>Tobish Search</label></a>
-<input id="searcherPanel" style="border-radius: 10px; vertical-align: 15px; font-size: 16px; height: 65%;" type="search" onchange="veyt()"/>
-<button style="border-radius: 10px; vertical-align: 15px; height: 65%; width: 75px;" type="button" onclick="veyt()">найти</button>
+<div style="background-color: silver ; padding: 0px; border: 1px solid gray; margin-top: -10px; height: 5%; min-height: 50px; padding-top: 10px;">
+  <a id="Logotipe" href="index.html"><label style="margin-right: 50px; filter: invert(100%); font-family: 'Arial Narrow Bold', sans-serif; font-size: 32px; background-position-x: center;" width=192 height=48>Tobish Search</label></a>
+<input id="searcherPanel" style="border-radius: 10px; font-size: 16px; height: 65%;" type="search" onchange="veyt()"/>
+<button style="border-radius: 10px; height: 65%; width: 75px;" type="button" onclick="veyt()">найти</button>
 </div>
 <div class="wrap">
  
  <main>
  
     <aside>
-      <h1 style="background-color: whitesmoke; border-radius: 10px; border-style: outset; margin-top: -10px; box-shadow: 2px 2px 7px;">Поисковик Google используется по умолчанию. В настройках можно изменить!<h1></h1>
+      <div class="paneli" id="paneli" style="background-color: whitesmoke; border-radius: 10px; border-style: outset; margin-top: -10px; box-shadow: 2px 2px 7px; font-size: 32px;">
+      <label>Поисковик Google используется по умолчанию. В настройках можно изменить!</label><button style="font-size: 32px; display: grid;" onclick="hidePanel()">X</button>
+      </div>
     </aside>
  
   </main>
@@ -119,6 +143,13 @@ Search helper created by Tobish. 2021
       value_ = document.getElementById("searcherPanel").value.toString();
       value2 = document.getElementById('ONLYVEBABR').innerHTML;
       open(value2 + value_);
+    }
+
+    function hidePanel(){
+     document.getElementById("paneli").innerHTML = "";
+     document.getElementById("paneli").style = "size= 0%;";
+     document.querySelector(".paneli").classList = "paneli2";
+     
     }
 </script>
     </body>
