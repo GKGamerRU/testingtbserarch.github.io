@@ -126,7 +126,7 @@ article {
  <main>
  
     <aside>
-      <div class="paneli" id="paneli" style="background-color: whitesmoke; border-radius: 10px; border-style: outset; margin-top: -10px; box-shadow: 2px 2px 7px; font-size: 32px;">
+      <div class="paneli" id="paneli" style="background-color: whitesmoke; border-radius: 10px; border-style: outset; margin-top: -10px; box-shadow: 2px 2px 7px; font-size: 32px;" onmousemove="document.getElementById('paneli').style = 'background-color: whitesmoke; border-radius: 10px; border-style: outset; margin-top: -10px; box-shadow: 2px 2px 7px; font-size: 32px; margin-top: ' + (event.pageY -150) + ';';">
       <label>Поисковик Google используется по умолчанию. В настройках можно изменить!</label><button style="font-size: 32px; display: grid;" onclick="hidePanel()">X</button>
       </div>
     </aside>
